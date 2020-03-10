@@ -5,13 +5,13 @@ let todolists = [
             {
                 "id": ObjectId(),
                 "text": "text_1_1",
-                "due_date": "2021-07-16T19:20:30",
+                "due_date": ISODate("2021-07-16T19:20:30"),
                 "finished": true
             },
             {
                 "id": ObjectId(),
                 "text": "text_1_2",
-                "due_date": "2022-07-16T19:20:30",
+                "due_date": ISODate("2021-07-16T19:20:30"),
                 "finished": true
             },
         ]
@@ -22,13 +22,13 @@ let todolists = [
             {
                 "id": ObjectId(),
                 "text": "text_2_1",
-                "due_date": "2023-07-16T19:20:30",
+                "due_date": ISODate("2021-07-16T19:20:30"),
                 "finished": true
             },
             {
                 "id": ObjectId(),
                 "text": "text_2_2",
-                "due_date": "2024-07-16T19:20:30",
+                "due_date": ISODate("2021-07-16T19:20:30"),
                 "finished": true
             },
         ]
