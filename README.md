@@ -1,5 +1,10 @@
 # TODO Application
 
+Application:
+* Flask-RESTful for API
+* MongoDB + Mongo Express
+* All in separete Docker containers
+* Deploy in one command
 
 ## How to install
 
