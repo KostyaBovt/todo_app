@@ -1,6 +1,6 @@
 # TODO Application
 
-Application:
+## Application:
 * Flask-RESTful for API
 * MongoDB + Mongo Express
 * All in separete Docker containers
