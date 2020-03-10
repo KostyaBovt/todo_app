@@ -1,0 +1,36 @@
+version: '3.3'
+services:
+  api:
+    build:
+      context: todo_api
+    volumes:
+      - ./todo_api:/todo_api
+    depends_on:
+      - mongo
+    env_file:
+      - todo_api/app.env
+    ports:
+      - 5000:5000
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo_db_container
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pass
+      MONGO_INITDB_DATABASE: todo_db
+    volumes:
+      - ./mongo/data/db:/data/db
+      - ./mongo/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d:ro
+
+  mongo-express:
+    image: mongo-express
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: pass
