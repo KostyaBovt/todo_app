@@ -1,7 +1,6 @@
 from flask_restful import Resource
-from bson.objectid import ObjectId
 from flask import request, abort
-from marshmallow import Schema, fields, exceptions
+from marshmallow import exceptions
 from services import todo_lists as todolists_service
 from schemas.todo_lists import TodoListSchema, TodoListPostSchema, TodoListPutSchema
 

@@ -1,5 +1,4 @@
 from db import get_db
-from flask import  abort
 from bson.objectid import ObjectId
 
 

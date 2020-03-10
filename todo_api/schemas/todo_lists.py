@@ -1,6 +1,7 @@
 from marshmallow import Schema, fields
 from schemas.todo_items import TodoItemSchema
 
+
 class TodoListSchema(Schema):
     _id = fields.Str()
     name = fields.Str()

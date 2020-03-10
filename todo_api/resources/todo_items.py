@@ -1,6 +1,6 @@
 from flask_restful import Resource
 from flask import request, abort
-from marshmallow import Schema, fields, exceptions
+from marshmallow import exceptions
 from services import todo_items as todoitems_service
 from schemas.todo_items import TodoItemSchema, TodoItemPostSchema, TodoItemPutSchema
 

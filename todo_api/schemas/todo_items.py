@@ -1,5 +1,6 @@
 from marshmallow import Schema, fields
 
+
 class TodoItemPostSchema(Schema):
     todolist_id = fields.Str(required=True)
     text = fields.Str(required=True)
